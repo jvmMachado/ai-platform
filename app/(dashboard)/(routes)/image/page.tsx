@@ -26,8 +26,10 @@ import {
 import { SelectValue } from '@radix-ui/react-select';
 import { Card, CardFooter } from '@/components/ui/card';
 import Image from 'next/image';
+import { useProModal } from '@/hooks/use-pro-modal';
 
 const ImagePage = () => {
+  const openProModal = useProModal((state) => state.onOpen);
   const router = useRouter();
   const [images, setImages] = useState<string[]>([]);
 
@@ -52,8 +54,10 @@ const ImagePage = () => {
 
       setImages(urls);
       form.reset();
-    } catch (error) {
-      // TODO: Open Pro Modal
+    } catch (error: any) {
+      if (error?.response?.status === 403) {
+        openProModal();
+      }
       console.log(error);
     } finally {
       router.refresh();

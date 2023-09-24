@@ -1,6 +1,6 @@
 'use client';
 
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import * as z from 'zod';
 import Heading from '@/components/heading';
 import { MessageSquare } from 'lucide-react';
@@ -19,8 +19,10 @@ import { Loader } from '@/components/loader';
 import { cn } from '@/lib/utils';
 import { UserAvatar } from '@/components/user-avatar';
 import { BotAvatar } from '@/components/bot-avatar';
+import { useProModal } from '@/hooks/use-pro-modal';
 
 const ConversationPage = () => {
+  const openProModal = useProModal((state) => state.onOpen);
   const router = useRouter();
   const [messages, setMessages] = useState<
     OpenAI.Chat.Completions.ChatCompletionMessageParam[]
@@ -51,8 +53,10 @@ const ConversationPage = () => {
       setMessages((current) => [...current, userMessage, response.data]);
 
       form.reset();
-    } catch (error) {
-      // TODO: Open Pro Modal
+    } catch (error: any) {
+      if (error?.response?.status === 403) {
+        openProModal();
+      }
       console.log(error);
     } finally {
       router.refresh();

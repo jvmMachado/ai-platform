@@ -1,4 +1,4 @@
-import { checkApiLimit } from '@/api-limit';
+import { checkApiLimit } from '@/lib/api-limit';
 import { useProModal } from '@/hooks/use-pro-modal';
 import { auth } from '@clerk/nextjs';
 import { NextResponse } from 'next/server';

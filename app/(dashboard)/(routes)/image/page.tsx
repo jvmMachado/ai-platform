@@ -27,6 +27,7 @@ import { SelectValue } from '@radix-ui/react-select';
 import { Card, CardFooter } from '@/components/ui/card';
 import Image from 'next/image';
 import { useProModal } from '@/hooks/use-pro-modal';
+import toast from 'react-hot-toast';
 
 const ImagePage = () => {
   const openProModal = useProModal((state) => state.onOpen);
@@ -57,6 +58,8 @@ const ImagePage = () => {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         openProModal();
+      } else {
+        toast.error('Something went wrong.');
       }
       console.log(error);
     } finally {

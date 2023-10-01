@@ -2,6 +2,7 @@
 
 import axios, { AxiosError } from 'axios';
 import * as z from 'zod';
+import toast from 'react-hot-toast';
 import Heading from '@/components/heading';
 import { MessageSquare } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -56,6 +57,8 @@ const ConversationPage = () => {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         openProModal();
+      } else {
+        toast.error('Something went wrong.');
       }
       console.log(error);
     } finally {

@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Genius: Sua Plataforma SaaS de Inteligência Artificial 🚀
 
-## Getting Started
+![Genius Logo](https://raw.githubusercontent.com/jvmMachado/ai-platform/master/public/logo.png) 
 
-First, run the development server:
+> 💡 **Desperte o gênio dentro de você** com a nossa plataforma de última geração que utiliza inteligência artificial para potencializar a sua criatividade.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 🔍 Visão Geral 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Genius** é uma plataforma SaaS de IA projetada para ajudar profissionais, criadores de conteúdo e entusiastas a darem vida às suas ideias. De chats com inteligência artificial até a geração de vídeos, Genius oferece uma variedade de recursos de ponta para satisfazer suas necessidades de conteúdo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🌟 Funcionalidades:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. 🤖 **Chat com IA**: Tenha conversas inspiradoras com nossa inteligência artificial.
+2. 🎨 **Geração de Imagens**: Transforme textos em imagens deslumbrantes.
+3. 🎥 **Geração de Vídeo**: Crie vídeos incríveis a partir de simples instruções.
+4. 🎵 **Geração de Música**: Desperte o músico dentro de você.
+5. 🖥️ **Geração de Código**: Codifique com a ajuda da IA.
 
-## Learn More
+💡 **Oferta Especial**: Cadastre-se agora e ganhe 5 gerações gratuitas!
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: Next.js 13 com Tailwind e Shadcn/ui para um design moderno e responsivo.
+- **Dados**: Prisma ORM para uma ótima integração com o banco de dados na Planetscale.
+- **Pagamentos**: Integração completa com Stripe para uma experiência de pagamento fluida.
+- **Gerenciamento de Estado**: Zustand garante que nossa plataforma seja reativa e eficiente.
+- **Validação**: Zod para uma validação robusta de esquema.
+- **Linguagem**: Typescript, por sua confiabilidade e eficiência.
+- **Padrões de Código**: ESlint para manter nosso código limpo e padronizado.
+- **Inteligência Artificial**: Integrado com as poderosas APIs da OpenAI e Replicate.
+- **Autenticação**: Clerk como nosso confiável serviço de autenticação.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🚀 Comece Agora!
 
-## Deploy on Vercel
+Pronto para experimentar? [Clique aqui](https://ai-platform-ooatxhllt-jvmmachado.vercel.app/) para acessar e se registrar na Genius.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📈 Para Recrutadores
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+💼 **Entre em contato** através de [joaovmmachado@gmail.com](mailto:joaovmmachado@gmail.com) ou visite meu [LinkedIn](https://www.linkedin.com/in/jvmmachado/) para mais informações. 
+
+---
+
+
+**Genius** - Liberte seu potencial criativo.
+
+## ⚠️ Este projeto é um SAAS fictício, apenas para fins didáticos. A integração de pagamentos não está habilitada para pagamentos reais e, como hospedagem, o projeto utiliza o plano gratuito da Vercel. Com isso, as chamadas ficam limitadas a um timeout de 10 segundos, portanto, é possível que haja erros, principalmente nos serviços de geração de música, vídeo e imagens.
